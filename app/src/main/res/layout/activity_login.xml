@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhiteBackGround"
+    tools:context="com.example.asus.demmi.LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/linearlayout2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="25sp"
+        android:paddingRight="25sp"
+        android:paddingTop="10sp"
+        android:paddingBottom="7sp"
+        android:background="@drawable/backgound_primaty_color_gradiant">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_height="60dp"
+                android:layout_width="80dp"
+                android:background="@drawable/demmi_word"
+                android:contentDescription="image"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/welcometodemmi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccentOverRed"
+                android:text="مرحبا بكم في تطبيق   "
+                android:layout_gravity="center_vertical">
+            </TextView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/amokstudiodesc"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#fff"
+            style="?android:textAppearanceSmall"
+            android:text="@string/desc_text"
+            android:layout_marginTop="15sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/joinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/allaah"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+            android:layout_marginTop="5sp"
+            android:textStyle="bold"
+            style="?android:textAppearanceSmallInverse"
+            android:layout_marginBottom="5sp">
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/linearlayout3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/learnmorebtn"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/buttonstylestroke"
+                android:textColor="@color/colorAccentOverRed"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:text="إعرف أكثر عنا"
+                android:textStyle="bold"
+                style="?android:textAppearanceSmall"/>
+
+            <Button
+                android:id="@+id/joinusbtn"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/buttonstylepink"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:text="إنضم إلينا"
+                android:textStyle="bold"
+                style="?android:textAppearanceSmall"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/email_login_form"
+        android:gravity="top|center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="0.5"
+        android:background="@color/colorWhiteBackGround"
+        >
+
+        <!-- Login progress -->
+        <ProgressBar
+            android:id="@+id/login_progress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:background="@drawable/drop_blood"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/colorPrimary"
+            />
+
+        <!-- padding top + bottom 12dp -->
+
+        <EditText
+            android:id="@+id/emailtext_login"
+            android:drawablePadding="20sp"
+            android:paddingLeft="12dp"
+            android:paddingRight="8dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext"
+            android:drawableRight="@drawable/ic_person_black_24dp"
+            android:layout_height="wrap_content"
+            android:layout_width="280sp"
+            style="?android:textAppearanceSmall"
+            android:hint="رقم الهاتف أو البريد الإلكتروني"
+            android:inputType="textEmailAddress"
+            android:textColor="#000"></EditText>
+
+
+        <EditText
+            android:id="@+id/passwordtext_login"
+            android:layout_marginTop="15sp"
+            android:drawablePadding="20sp"
+            android:paddingLeft="12dp"
+            android:paddingRight="8dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/edittext"
+            android:drawableRight="@drawable/ic_lock_black_24dp"
+            android:layout_height="wrap_content"
+            android:layout_width="280sp"
+            android:hint="كلمة السر"
+            android:inputType="textPassword"
+            style="?android:textAppearanceSmall"
+            android:textColor="#000"></EditText>
+
+
+        <Button
+            android:id="@+id/signinbtn"
+            android:drawablePadding="10sp"
+            android:drawableRight="@drawable/ic_send_black_24dp"
+            android:layout_marginTop="15sp"
+            android:layout_height="50dp"
+            android:layout_width="100sp"
+            android:background="@drawable/buttonstylepink"
+            android:text="دخول"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            style="?android:textAppearanceSmall"
+            />
+
+        <TextView
+            android:id="@+id/pleasecheckout"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"
+            android:visibility="invisible"
+            android:text="الرجاء التأكد من معلومات الإدخال و إعادة المحاولة مرة أخرى"
+            android:layout_gravity="center_horizontal">
+        </TextView>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/copyrighttext"
+        android:layout_marginBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="@color/colorGrey"
+        android:text="علامة © كل الحقوق محفوظة لصالح فريق تطبيق دمي 2018"
+        android:layout_gravity="center_horizontal">
+    </TextView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context="com.example.asus.demmi.StartActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/start_logo_demmi"
+            android:layout_weight="1"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/demmi_logo3" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <ProgressBar
+                android:id="@+id/internetProgressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20sp"
+                android:background="@drawable/drop_blood"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/colorPrimary"
+                />
+
+            <TextView
+                android:id="@+id/internetcheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:text="جاري التحقق من الاتصال بالانترنت ..."
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/copyrighttext"
+            android:layout_marginBottom="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="@color/colorGrey"
+            android:text="Copyright © All Rights Reserved 2018"
+            android:layout_gravity="center_horizontal">
+        </TextView>
+
+    </LinearLayout>
+</LinearLayout>

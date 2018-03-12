@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.demmi.AboutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/start_logo_demmi"
+            android:layout_width="280dp"
+            android:layout_height="240dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/demmi_logo3" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            >
+            <TextView
+                android:id="@+id/name_of_allah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="25sp"
+                android:textColor="@color/colorAccent"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:text=" بِسْمِ ٱللّٰهِ ٱلرَّحْمٰنِ ٱلرَّحِيمِ"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/internetcheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="15sp"
+                android:textColor="#000"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:text="تطبيق دمي هو تطبيق فريد من نوعه يمكن من تشكيل مجتمع تعاوني بإمتياز و يسمح بمساعدة المرضى المحتاجين للدم في كل أرباع الوطن الجزائري و نرجوا نحن فريق تطبيق دمي الشفاء لكل الجزائرين و المؤمنين أجمعين و لا تنسونا بصالح دعائكم."
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+            <Button
+                android:id="@+id/back_to_main"
+                android:drawablePadding="10sp"
+                android:drawableRight="@drawable/ic_send_black_24dp"
+                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonstylepink"
+                android:text="الرجوع إلى الرئيسية"
+                android:layout_gravity="center"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                style="?android:textAppearanceSmall"
+                />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/copyrighttext"
+            android:layout_marginBottom="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="@color/colorDark"
+            android:text="علامة © كل الحقوق محفوظة لصالح فريق تطبيق دمي 2018"
+            android:layout_gravity="center_horizontal">
+        </TextView>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">Demmi</string>
+    <string name="desc_text">تطبيق دمي هو أول تطبيق فريد من نوعه في الجزائر يسمح بتشكيل مجتمع تعاوني بامتياز في ميدان التبرع بالدم حيث يسمح التطبيق للمستخدمين بنشر طلبات تبرع جديدة مع امكانية تحديد فصيلة الدم، و التحديد الجيوغرافي للمستخدمين و طلبات التبرع للدم لتسهيل عمليات الاتصال و النقل، كما يشعر التطبيق المستخدمين عند كل طلب جديد حسب أهميته بالنسبة لهم. </string>
+    <string name="allaah">۩ قال الله تعالى { وَمَنْ أَحْيَاهَا فَكَأَنَّمَا أَحْيَا النَّاسَ جَمِيعًا ۚ } ۩</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="error_invalid_password">كلمة السر غير ملائمة (قصيرة جدا).</string>
+    <string name="error_invalid_email">رقم الهاتف أو البريد الإلكتروني، غير ملائم الرجاء التأكد.</string>
+    <string name="error_incorrect_password">كلمة السر خاطئة</string>
+    <string name="error_field_required">يجب ملأ كل حقول معلومات الإدخال.</string>
+
+    <string name="wilaya_prompt">إختر ولايتك</string>
+
+    <string-array name="wilaya_arrays">
+        <item>1 ولاية أدرار</item>
+        <item>2 ولاية الشلف</item>
+        <item>3 ولاية الأغواط</item>
+        <item>4 ولاية أم البواقي</item>
+        <item>5 ولاية باتنة</item>
+        <item>6 ولاية بجاية</item>
+        <item>7 ولاية بسكرة</item>
+        <item>8 ولاية بشار</item>
+        <item>9 ولاية البليدة</item>
+        <item>10 ولاية البويرة</item>
+        <item>11 ولاية تمنراست</item>
+        <item>12 ولاية تبسة</item>
+        <item>13 ولاية تلمسان</item>
+        <item>14 ولاية تيارت</item>
+        <item>15 ولاية تيزي وزو</item>
+        <item>16 ولاية الجزائر</item>
+        <item>17 ولاية الجلفة</item>
+        <item>18 ولاية جيجل</item>
+        <item>19 ولاية سطيف</item>
+        <item>20 ولاية سعيدة</item>
+        <item>21 ولاية سكيكدة</item>
+        <item>22 ولاية سيدي بلعباس</item>
+        <item>23 ولاية عنابة</item>
+        <item>24 ولاية قالمة</item>
+        <item>25 ولاية قسنطينة</item>
+        <item>26 ولاية المدية</item>
+        <item>27 ولاية مستغانم</item>
+        <item>28 ولاية المسيلة</item>
+        <item>29 ولاية معسكر</item>
+        <item>30 ولاية ورقلة</item>
+        <item>31 ولاية وهران</item>
+        <item>32 ولاية البيض</item>
+        <item>33 ولاية اليزي</item>
+        <item>34 ولاية برج بوعريريج</item>
+        <item>35 ولاية بومرداس</item>
+        <item>36 ولاية الطارف</item>
+        <item>37 ولاية تندوف</item>
+        <item>38 ولاية تسمسيلت</item>
+        <item>39 ولاية الوادي</item>
+        <item>40 ولاية خنشلة</item>
+        <item>41 ولاية سوق أهراس</item>
+        <item>42 ولاية تيبازة</item>
+        <item>43 ولاية ميلة</item>
+        <item>44 ولاية عين الدفلى</item>
+        <item>45 ولاية النعامة</item>
+        <item>46 ولاية عين تموشنت</item>
+        <item>47 ولاية غرداية</item>
+        <item>48 ولاية غليزان</item>
+    </string-array>
+
+
+    <string-array name="sex_arrays">
+        <item> ذكر </item>
+        <item> أنثى </item>
+    </string-array>
+
+    <string-array name="age_arrays">
+        <item>أقل من 15 سنة</item>
+        <item>من 15 إلى 18</item>
+        <item>من 18 إلى 25</item>
+        <item>من 25 إلى 30</item>
+        <item>أكثر من 30 سنة</item>
+    </string-array>
+
+    <string-array name="blood2_arrays">
+        <item>A</item>
+        <item>AB</item>
+        <item>B</item>
+        <item>O</item>
+    </string-array>
+
+    <string-array name="blood1_arrays">
+        <item>موجب +</item>
+        <item>سالب -</item>
+
+    </string-array>
+
+
+</resources>

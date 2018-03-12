@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e6665d</color>
+    <color name="colorPrimaryGradientStart">@color/colorPrimary</color>
+    <color name="colorPrimaryGradientFinish">#ef6f66</color>
+    <color name="colorPrimaryDark">#c1514b</color>
+    <color name="colorAccent">#5eda7f</color>
+    <color name="colorAccentOverRed">#86fda6</color>
+    <color name="colorWhiteBackGround">#ffffff</color>
+    <color name="colorDark">#000</color>
+    <color name="colorAccentPressed">#9d4cd670</color>
+    <color name="colorAccentOverRedPressed">#c386fda6</color>
+    <color name="colorGrey">#78000000</color>
+    <color name="colorGreyTabIcon">#59000000</color>
+
+    <!--#68e489-->
+
+</resources>

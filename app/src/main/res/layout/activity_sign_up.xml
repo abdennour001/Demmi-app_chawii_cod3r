@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_sign_up"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.example.asus.demmi.SignUpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/backgound_primaty_color_gradiant"
+            android:orientation="vertical"
+            android:padding="15sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/welcometoamokstudio"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:paddingBottom="15sp"
+                    android:paddingTop="5sp"
+                    android:text=" الآن"
+                    android:textColor="@color/colorAccentOverRed"
+                    android:textSize="30sp"
+                    android:textStyle="normal"></TextView>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/demmi_word"
+                    android:contentDescription="image" />
+
+                <TextView
+                    android:id="@+id/welcometoamokstudio2"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingBottom="15sp"
+                    android:paddingTop="5sp"
+                    android:text="إنضم الى "
+                    android:textColor="@color/colorAccentOverRed"
+                    android:textSize="30sp"
+                    android:textStyle="normal"></TextView>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/hiamokstudio"
+                style="?android:textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10sp"
+                android:layout_marginTop="10sp"
+                android:text='" إن التبرع بالدم عمل انساني نبيل لأنه يساهم في إنقاذ حياة آلاف المرضى الذين يكونون في أمس الحاجة لنقل الدم و الحقيقة أن واحد من كل عشرة مرضى يدخلون المشفى في حاجة الى نقل الدم خصوصا المرضى الذين يعانون من الأمراض الخبيثة أو المستعصية و كذلك الأشخاص الذين تعرضوا لحوادث خطيرة فقدوا على إثرها كمية كبيرة من الدم كل هؤلاء في أمس الحاجة لنقل الدم لإنقاذ حياتهم. وغير ذلك فالدم هام جدا لإنقاذ حياة العديد من المرضى المعرضين للخطر نتيجة فقد كميات كبيرة من الدم أثناء العمليات الجراحية الكبرى. "'
+                android:textColor="#fff"
+                android:textSize="15sp"></TextView>
+
+            <Button
+                android:id="@+id/back_to_main"
+                style="?android:textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonstylestroke"
+                android:text="العودةإلى الصفحة الرئيسية"
+                android:textColor="@color/colorAccentOverRed"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--<TextView
+                android:id="@+id/name_of_allah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                style="?android:textAppearanceSmall"
+                android:text=" الرجاء إكمال كل المعلومات التالية : "
+                android:layout_gravity="center_horizontal"/>
+-->
+
+            <EditText
+                android:id="@+id/name_sign_up"
+                style="?android:textAppearanceSmall"
+                android:layout_width="280sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edittext"
+                android:drawablePadding="20sp"
+                android:drawableRight="@drawable/ic_person_black_24dp"
+                android:hint="إسم المستخدم"
+                android:inputType="textPersonName"
+                android:paddingBottom="10dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="8dp"
+                android:paddingTop="10dp"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/name_sign_up_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone"
+                android:text="*الرجاء التأكد من إسم المستخدم"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+
+                >
+
+                <TextView
+                    android:id="@+id/phone_zone_algeria"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="+213"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="15sp" />
+
+
+                <EditText
+                    android:id="@+id/phone_number_sign_up"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="238sp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext"
+                    android:drawablePadding="20sp"
+                    android:drawableRight="@drawable/ic_phone_android_black_24dp"
+                    android:hint="رقم الهاتف"
+                    android:inputType="number"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="10dp"
+                    android:textColor="#000" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/phone_number_sign_up_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone"
+                android:text="*الرجاء التأكد من رقم الهاتف"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+            <EditText
+                android:id="@+id/email_sign_up"
+                style="?android:textAppearanceSmall"
+                android:layout_width="280sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext"
+                android:drawablePadding="20sp"
+                android:drawableRight="@drawable/ic_email_black_24dp"
+                android:hint="البريد الإلكتروني"
+                android:inputType="textEmailAddress"
+                android:paddingBottom="10dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="8dp"
+                android:paddingTop="10dp"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/email_sign_up_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone"
+                android:text="*الرجاء التأكد من البريد الإلكتروني"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+            <EditText
+                android:id="@+id/pass_word_sign_up"
+                style="?android:textAppearanceSmall"
+                android:layout_width="280sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext"
+                android:drawablePadding="20sp"
+                android:drawableRight="@drawable/ic_lock_black_24dp"
+                android:hint="كلمة المرور"
+                android:inputType="textPassword"
+                android:paddingBottom="10dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="8dp"
+                android:paddingTop="10dp"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/password_sign_up_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone"
+                android:text="*الرجاء التأكد من كلمة المرور"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+
+            <EditText
+                android:id="@+id/confirm_pass_word_sign_up"
+                style="?android:textAppearanceSmall"
+                android:layout_width="280sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext"
+                android:drawablePadding="20sp"
+                android:drawableRight="@drawable/ic_lock_black_24dp"
+                android:hint="تأكيد كلمة المرور"
+                android:inputType="textPassword"
+                android:paddingBottom="10dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="8dp"
+                android:paddingTop="10dp"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/password2_sign_up_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone"
+                android:text="*كلمة المرور غير مطابقة"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+
+
+                <Spinner
+                    android:id="@+id/spinner_wilaya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/wilaya_arrays"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="10dp"
+                    android:prompt="@string/wilaya_prompt"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:id="@+id/add_wilaya"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:text="إضافة الولاية "
+                    android:textColor="@color/colorGrey"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/add_region_sign_up"
+                style="?android:textAppearanceSmall"
+                android:layout_width="280sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext"
+                android:drawablePadding="20sp"
+                android:drawableRight="@drawable/ic_add_location_black_24dp"
+                android:hint="الدائرة التابع لها"
+                android:inputType="text"
+                android:paddingBottom="10dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="8dp"
+                android:paddingTop="10dp"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/region_sign_up_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone"
+                android:text="*الرجاء التأكد من الدائرة"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+
+                >
+
+
+                <Spinner
+                    android:id="@+id/spinner_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/sex_arrays"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="10dp"
+                    android:prompt="@string/wilaya_prompt"
+                    android:layout_gravity="center_vertical"
+
+                    />
+
+                <TextView
+                    android:id="@+id/add_sex"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:text="إضافة الجنس "
+                    android:textColor="@color/colorGrey"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+
+                >
+
+
+                <Spinner
+                    android:id="@+id/spinner_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/age_arrays"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="10dp"
+                    android:prompt="@string/wilaya_prompt"
+                    android:layout_gravity="center_vertical"
+
+                    />
+
+                <TextView
+                    android:id="@+id/add_age"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:text="إضافة العمر "
+                    android:textColor="@color/colorGrey"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/age_sign_up_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone"
+                android:text="*العمر غير مناسب للتبرع آسفون"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+
+                >
+
+
+                <Spinner
+                    android:id="@+id/spinner_blood2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/blood1_arrays"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="10dp"
+                    android:prompt="@string/wilaya_prompt"
+                    android:layout_gravity="center_vertical"
+
+                    />
+
+                <TextView
+                    android:id="@+id/add_blood1"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="إضافة الريزوس "
+                    android:textColor="@color/colorGrey"
+                    android:textSize="15sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_blood1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/blood2_arrays"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="10dp"
+                    android:prompt="@string/wilaya_prompt"
+                    android:layout_gravity="center_vertical"
+
+                    />
+
+                <TextView
+                    android:id="@+id/add_blood2"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="إضافة فصيلة الدم "
+                    android:textColor="@color/colorGrey"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/sign_up_btn"
+                android:drawablePadding="10sp"
+                android:drawableRight="@drawable/ic_send_black_24dp"
+                android:layout_height="wrap_content"
+                android:layout_width="140sp"
+                android:background="@drawable/buttonstylepink"
+                android:text="إنضم الآن"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:focusedByDefault="true"
+                style="?android:textAppearanceSmall"
+                />
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="5sp"
+                android:layout_marginBottom="20dp">
+
+                    <TextView android:id="@+id/sign_in_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorAccent"
+                    android:linksClickable="true"
+                    android:autoLink="all"
+                    android:text="سجل دخولك"/>
+
+                <TextView
+                    android:id="@+id/sign_in_text_view2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:text="هل لديك حساب في دمي ؟     "/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pleasecheckout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone"
+                android:text="الرجاء التأكد من معلومات الإدخال و إعادة المحاولة مرة أخرى"
+                android:layout_gravity="center_horizontal">
+            </TextView>
+
+            <!-- Login progress -->
+            <ProgressBar
+                android:id="@+id/signup_progress"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:background="@drawable/drop_blood"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/colorPrimary"
+                />
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>
