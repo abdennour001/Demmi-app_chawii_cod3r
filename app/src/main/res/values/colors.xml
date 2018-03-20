@@ -12,6 +12,9 @@
     <color name="colorAccentOverRedPressed">#c386fda6</color>
     <color name="colorGrey">#78000000</color>
     <color name="colorGreyTabIcon">#59000000</color>
+    <color name="colorBackground">#12000000</color>
+    <color name="colorTransparent">#00ffffff</color>
+    <color name="colorOver">#8bffffff</color>
 
     <!--#68e489-->
 

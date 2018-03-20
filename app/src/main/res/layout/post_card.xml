@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/post1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/colorWhiteBackGround"
+        android:background="?attr/selectableItemBackground"
+        android:layout_gravity="center_horizontal"
+        android:elevation="5dp"
+        app:cardCornerRadius="10dp">
+
+
+        <!-- Card view container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Second container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:gravity="top">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="top|left">
+
+                    <ImageView
+                        android:id="@+id/post_control"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:src="@drawable/ic_more_horiz_grey_24dp"/>
+
+                </LinearLayout>
+
+                <!-- Name and Picture container -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="top|right">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="5dp"
+                        android:layout_gravity="center">
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="right">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="top"
+                                android:layout_marginRight="5dp">
+
+                                <ImageView
+                                    android:id="@+id/star1"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_star_green_24dp"/>
+
+                                <ImageView
+                                    android:id="@+id/star2"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_star_green_24dp"/>
+
+                                <ImageView
+                                    android:id="@+id/star3"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_star_half_green_24dp"/>
+
+                                <ImageView
+                                    android:id="@+id/star4"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_star_border_green_24dp"/>
+
+                                <ImageView
+                                    android:id="@+id/star5"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_star_border_green_24dp"/>
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/user_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:text="أمقران عبد النور"
+                                android:textSize="18dp"
+                                android:layout_marginLeft="5dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorGrey"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="top|right">
+
+                            <TextView
+                                android:id="@+id/post_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:layout_gravity="right"
+                                android:text="• قبل يوم"
+                                android:textColor="@color/colorGrey"
+                                android:textSize="14dp"/>
+
+                            <TextView
+                                android:id="@+id/location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:text="ولاية باتنة - تازولت"
+                                android:textSize="14dp"
+                                android:textColor="@color/colorGrey"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/image_name"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/badge_background"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:textColor="@color/colorWhiteBackGround"
+                        android:text="أ ع"
+                        android:textSize="16sp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/post_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:paddingBottom="5dp"
+                android:text="السلام عليكم و رحمة الله أنا أود أن أقدم هذا البلاغ المستعجل عن حاجة ماسة إلى وحدات دم و الحالة حرجة جدا و ذلك في المستشفى الجامعي بباتنة ساعدونا و أجركم على الله."
+                android:textColor="@color/colorGrey"
+                android:textSize="14dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/tags_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                app:flexDirection="row_reverse"
+                app:alignContent="flex_start"
+                app:alignItems="flex_start"
+                app:flexWrap="wrap"
+                >
+
+                <!-- Post Tags -->
+
+                <TextView
+                    android:id="@+id/tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonstylepost"
+                    android:layout_marginLeft="5dp"
+                    android:text="طلب تبرع بالدم"
+                    android:textColor="@color/colorWhiteBackGround"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+                <!-- Post Tags -->
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="top">
+
+                <TextView
+                    android:id="@+id/share_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_reply_green_24dp"
+                    android:drawablePadding="10dp"
+                    android:text="مشاركة"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+
+                <TextView
+                    android:id="@+id/contact_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:drawableRight="@drawable/ic_call_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:text="معلومات الإتصال"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

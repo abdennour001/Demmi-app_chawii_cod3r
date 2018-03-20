@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     xmlns:fab="http://schemas.android.com/apk/res-auto">
 
 
@@ -21,10 +22,21 @@
         android:indeterminateTint="@color/colorPrimary"
         />
 
-    <include layout="@layout/post_layout" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorBackground">
+
+        <!--<include layout="@layout/post_layout" />-->
+        <include layout="@layout/home_content"/>
+
+
+    </LinearLayout>
 
 
     <LinearLayout
+        android:id="@+id/upper_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -60,7 +72,7 @@
             fab:menu_labels_textColor="#f2f1f1"
             fab:menu_labels_textSize="15sp"
             fab:menu_openDirection="up"
-            fab:menu_shadowColor="#66aff198"
+            fab:menu_shadowColor="#39000000"
             fab:menu_shadowRadius="4dp"
             fab:menu_shadowXOffset="1dp"
             fab:menu_shadowYOffset="4dp"

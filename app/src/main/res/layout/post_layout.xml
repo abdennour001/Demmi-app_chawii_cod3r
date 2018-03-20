@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <!-- 1st Post -->
     <android.support.v7.widget.CardView
+        android:id="@+id/post1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:layout_centerHorizontal="true"
         android:backgroundTint="@color/colorWhiteBackGround"
-        android:background="@color/colorWhiteBackGround"
+        android:background="?attr/selectableItemBackground"
         android:layout_gravity="center_horizontal"
         android:elevation="5dp"
         app:cardCornerRadius="10dp">
@@ -40,7 +42,6 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
                         android:background="?attr/selectableItemBackground"
                         android:src="@drawable/ic_more_horiz_grey_24dp"/>
 
@@ -72,7 +73,6 @@
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
                                 android:layout_gravity="top"
-                                android:layout_marginTop="5dp"
                                 android:layout_marginRight="5dp">
 
                                 <ImageView
@@ -108,10 +108,11 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="right"
                                 android:text="أمقران عبد النور"
-                                android:textSize="20dp"
+                                android:textSize="18dp"
                                 android:layout_marginLeft="5dp"
                                 android:textStyle="bold"
-                                android:textColor="@color/colorGrey"/>
+                                android:textColor="@color/colorGrey"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
 
                         </LinearLayout>
@@ -153,8 +154,9 @@
                         android:gravity="center"
                         android:padding="3dp"
                         android:textColor="@color/colorWhiteBackGround"
-                        android:text="أع"
-                        android:textSize="18sp"/>
+                        android:text="أ ع"
+                        android:textSize="16sp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
 
 
                 </LinearLayout>
@@ -170,7 +172,7 @@
                 android:paddingBottom="5dp"
                 android:text="السلام عليكم و رحمة الله أنا أود أن أقدم هذا البلاغ المستعجل عن حاجة ماسة إلى وحدات دم و الحالة حرجة جدا و ذلك في المستشفى الجامعي بباتنة ساعدونا و أجركم على الله."
                 android:textColor="@color/colorGrey"
-                android:textSize="16dp"
+                android:textSize="14dp"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
 
             <LinearLayout
@@ -188,7 +190,7 @@
                     android:layout_marginLeft="5dp"
                     android:text="O +"
                     android:textColor="@color/colorWhiteBackGround"
-                    android:textSize="14dp"
+                    android:textSize="12dp"
                     android:textStyle="normal"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
 
@@ -200,7 +202,7 @@
                     android:layout_marginLeft="5dp"
                     android:text="A -"
                     android:textColor="@color/colorWhiteBackGround"
-                    android:textSize="14dp"
+                    android:textSize="12dp"
                     android:textStyle="normal"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
 
@@ -212,7 +214,7 @@
                     android:layout_marginLeft="5dp"
                     android:text="طلب تبرع بالدم"
                     android:textColor="@color/colorWhiteBackGround"
-                    android:textSize="14dp"
+                    android:textSize="12dp"
                     android:textStyle="normal"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
 
@@ -233,7 +235,7 @@
                     android:drawablePadding="10dp"
                     android:text="مشاركة"
                     android:textColor="@color/colorAccent"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:textStyle="bold"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
 
@@ -246,7 +248,7 @@
                     android:drawablePadding="10dp"
                     android:text="معلومات الإتصال"
                     android:textColor="@color/colorAccent"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:textStyle="bold"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
 
@@ -255,5 +257,345 @@
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
+
+    <!-- end post 1-->
+
+    <!-- 2nd Post -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/post2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/colorWhiteBackGround"
+        android:background="?attr/selectableItemBackground"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/post1"
+        android:elevation="5dp"
+        app:cardCornerRadius="10dp">
+
+
+        <!-- Card view container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Second container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:gravity="top">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="top|left">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:src="@drawable/ic_more_horiz_grey_24dp"/>
+
+                </LinearLayout>
+
+                <!-- Name and Picture container -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="top|right">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="5dp"
+                        android:layout_gravity="center">
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="right">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="top"
+                                android:layout_marginRight="5dp">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_star_green_24dp"/>
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_star_green_24dp"/>
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_star_green_24dp"/>
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_star_green_24dp"/>
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_star_green_24dp"/>
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:text="شهرة محمد ع.المالك"
+                                android:textSize="18dp"
+                                android:layout_marginLeft="5dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorGrey"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="top|right">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:layout_gravity="right"
+                                android:text="• قبل 2 ساعة"
+                                android:textColor="@color/colorGrey"
+                                android:textSize="14dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:text="ولاية الشلف - الآغا"
+                                android:textSize="14dp"
+                                android:textColor="@color/colorGrey"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/badge_background"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:textColor="@color/colorWhiteBackGround"
+                        android:text="ش ع"
+                        android:textSize="16sp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:paddingBottom="5dp"
+                android:text="السلام عليكم و رحمة الله تعالى و بركاته لقد تم تحديد موعد حملة تبرع بالدم في مدينة الشلف و ذلك لفائدة عدة مستشفيات و عيادات في المنطقة و على هذا الأساس نحن نرجوا منكم أن تكونوا في الموعد و أن تساعدونا على إنقاذ الكثير من الأرواح فقطرة من دمكم قد تساوي حياة إنسان."
+                android:textColor="@color/colorGrey"
+                android:textSize="14dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/tags_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                app:flexDirection="row_reverse"
+                app:alignContent="flex_start"
+                app:alignItems="flex_start"
+                app:flexWrap="wrap"
+                >
+
+                <!-- Post Tags -->
+
+
+                <TextView
+                    android:id="@+id/tag5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonstylepost"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="الشلف"
+                    android:textColor="@color/colorWhiteBackGround"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+
+                <TextView
+                    android:id="@+id/tag6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonstylepost"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="حملة تبرع بالدم"
+                    android:textColor="@color/colorWhiteBackGround"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+
+                <TextView
+                    android:id="@+id/tag7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonstylepost"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="طلب عام للتبرع بالدم"
+                    android:textColor="@color/colorWhiteBackGround"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+                <TextView
+                    android:id="@+id/tag8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonstylepost"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="مهم جدا"
+                    android:textColor="@color/colorWhiteBackGround"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+                <TextView
+                    android:id="@+id/tag1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonstylepost"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="O"
+                    android:textColor="@color/colorWhiteBackGround"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+
+                <TextView
+                    android:id="@+id/tag2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonstylepost"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="AB"
+                    android:textColor="@color/colorWhiteBackGround"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+
+                <TextView
+                    android:id="@+id/tag3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonstylepost"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="B"
+                    android:textColor="@color/colorWhiteBackGround"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+
+                <TextView
+                    android:id="@+id/tag4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonstylepost"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="A"
+                    android:textColor="@color/colorWhiteBackGround"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+
+                <!-- Post Tags -->
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="top">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_reply_green_24dp"
+                    android:drawablePadding="10dp"
+                    android:text="مشاركة"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:drawableRight="@drawable/ic_call_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:text="معلومات الإتصال"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <!-- end post 2-->
 
 </RelativeLayout>

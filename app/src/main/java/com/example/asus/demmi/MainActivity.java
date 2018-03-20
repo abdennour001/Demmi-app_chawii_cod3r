@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // Get the bar title.
 
+
         tabHomeIconLayout = getLayoutInflater().inflate(R.layout.custom_icon_home, null);
         tabNotificationIconLayout = getLayoutInflater().inflate(R.layout.custom_icon_notification, null);
         tabPersonIconLayout = getLayoutInflater().inflate(R.layout.custom_icon_person, null);
