@@ -12,15 +12,16 @@ class Post {
     /** Post attributes */
 
     private List<BloodType> bloodType = new ArrayList<>();
-    private Wilaya wilaya;
+    private Wilayas wilaya;
     private String region;
-    private Date postDate; // dateof the post.
+    private Date postDate; // date of the post.
     private Date dateBegin; // First day of the Don.
     private Date dateFinish; // Final day of the Don.
     private int postID;
     private String postText;
     private Contact contactElements; // Contains post publisher, the don date and place, user personal information (name, email, phone number and more).
     private List<PostTag> postTags = new ArrayList<>();
+    private float importance;
 
     /**
      * */
@@ -40,11 +41,11 @@ class Post {
         this.bloodType = bloodType;
     }
 
-    public Wilaya getWilaya() {
+    public Wilayas getWilaya() {
         return wilaya;
     }
 
-    public void setWilaya(Wilaya wilaya) {
+    public void setWilaya(Wilayas wilaya) {
         this.wilaya = wilaya;
     }
 
@@ -118,5 +119,13 @@ class Post {
 
     public void addBloodType(BloodType bloodType) {
         this.bloodType.add(bloodType);
+    }
+
+    public float getImportance() {
+        return importance;
+    }
+
+    public void setImportance(float importance) {
+        this.importance = importance;
     }
 }

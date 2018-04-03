@@ -1,6 +1,5 @@
 package com.example.asus.demmi;
 
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -14,7 +13,7 @@ class Contact {
     private User user;
     private List<Integer> extraPhoneNumbers;
     private List<String> extraEmails;
-    private List<Wilaya> extraWilayas;
+    private List<Wilayas> extraWilayas;
     private List<String> extraRegions;
 
     /*
@@ -49,11 +48,11 @@ class Contact {
         this.extraEmails = extraEmails;
     }
 
-    public List<Wilaya> getExtraWilayas() {
+    public List<Wilayas> getExtraWilayas() {
         return extraWilayas;
     }
 
-    public void setExtraWilayas(List<Wilaya> extraWilayas) {
+    public void setExtraWilayas(List<Wilayas> extraWilayas) {
         this.extraWilayas = extraWilayas;
     }
 

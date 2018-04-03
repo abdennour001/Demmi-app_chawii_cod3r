@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <android.support.v7.widget.CardView
@@ -11,10 +11,11 @@
         android:layout_margin="5dp"
         android:layout_centerHorizontal="true"
         android:backgroundTint="@color/colorWhiteBackGround"
-        android:background="?attr/selectableItemBackground"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
         android:layout_gravity="center_horizontal"
         android:elevation="5dp"
-        app:cardCornerRadius="10dp">
+        app:cardCornerRadius="5dp">
 
 
         <!-- Card view container -->
@@ -41,7 +42,8 @@
                         android:id="@+id/post_control"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:src="@drawable/ic_more_horiz_grey_24dp"/>
 
                 </LinearLayout>
@@ -198,16 +200,157 @@
                 <!-- Post Tags -->
 
                 <TextView
-                    android:id="@+id/tag"
+                    android:id="@+id/tag0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/buttonstylepost"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
                     android:text="طلب تبرع بالدم"
                     android:textColor="@color/colorWhiteBackGround"
                     android:textSize="12dp"
                     android:textStyle="normal"
+                    android:visibility="gone"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+                <TextView
+                    android:id="@+id/tag1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonstylepost"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="طلب تبرع بالدم"
+                    android:textColor="@color/colorWhiteBackGround"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+                <TextView
+                    android:id="@+id/tag2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonstylepost"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="طلب تبرع بالدم"
+                    android:textColor="@color/colorWhiteBackGround"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+                <TextView
+                    android:id="@+id/tag3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonstylepost"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="طلب تبرع بالدم"
+                    android:textColor="@color/colorWhiteBackGround"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+                <TextView
+                    android:id="@+id/tag4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonstylepost"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="طلب تبرع بالدم"
+                    android:textColor="@color/colorWhiteBackGround"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+                <TextView
+                    android:id="@+id/tag5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonstylepost"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="طلب تبرع بالدم"
+                    android:textColor="@color/colorWhiteBackGround"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+                <TextView
+                    android:id="@+id/tag6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonstylepost"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="طلب تبرع بالدم"
+                    android:textColor="@color/colorWhiteBackGround"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+                <TextView
+                    android:id="@+id/tag7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonstylepost"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="طلب تبرع بالدم"
+                    android:textColor="@color/colorWhiteBackGround"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+                <TextView
+                    android:id="@+id/tag8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonstylepost"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="طلب تبرع بالدم"
+                    android:textColor="@color/colorWhiteBackGround"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+                <TextView
+                    android:id="@+id/tag9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonstylepost"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="طلب تبرع بالدم"
+                    android:textColor="@color/colorWhiteBackGround"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+                <TextView
+                    android:id="@+id/tag10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonstylepost"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="طلب تبرع بالدم"
+                    android:textColor="@color/colorWhiteBackGround"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
 
                 <!-- Post Tags -->
 
@@ -228,6 +371,8 @@
                     android:drawablePadding="10dp"
                     android:text="مشاركة"
                     android:textColor="@color/colorAccent"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:textSize="16dp"
                     android:textStyle="bold"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
@@ -244,6 +389,8 @@
                     android:textColor="@color/colorAccent"
                     android:textSize="16dp"
                     android:textStyle="bold"
+                    android:focusable="true"
+                    android:clickable="true"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
 
 
@@ -252,4 +399,4 @@
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

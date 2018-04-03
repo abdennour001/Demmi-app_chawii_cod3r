@@ -1,29 +1,24 @@
 package com.example.asus.demmi;
 
+import android.annotation.SuppressLint;
 import android.content.res.Resources;
-import android.graphics.Color;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
 import com.github.clans.fab.FloatingActionMenu;
 
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -73,11 +68,12 @@ public class HomeController extends Fragment {
         postList = new ArrayList<>();
         adapter = new PostAdapter(this.getContext(), postList);
 
-        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this.getContext(), 2);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this.getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(10), true));
+        recyclerView.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(0), true));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
+
 
         preparePosts();
 
@@ -120,13 +116,18 @@ public class HomeController extends Fragment {
 
     private void preparePosts() {
 
+        // Date et temps
+        Date date=new Date();
+        @SuppressLint("SimpleDateFormat") DateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm");
+
+
         Post post1= new Post();
         Post post2= new Post();
         Post post3= new Post();
 
         // Post 1 configuration
         post1.setPostText("السلام عليكم و رحمة الله أنا أود أن أقدم هذا البلاغ المستعجل عن حاجة ماسة إلى وحدات دم و الحالة حرجة جدا و ذلك في المستشفى الجامعي بباتنة ساعدونا و أجركم على الله.");
-        post1.setPostDate(new GregorianCalendar(2018, Calendar.FEBRUARY, 11).getTime());
+        post1.setPostDate(new Date());
         post1.addTag(new PostTag("طلب تبرع بالدم"));
         post1.addTag(new PostTag("A -"));
         post1.addTag(new PostTag("O +"));
@@ -135,13 +136,14 @@ public class HomeController extends Fragment {
         /* Contact of post 1*/
         Contact contact1 =new Contact();
         contact1.setUser(new User(1, "password", "بين 18 و 25", "amokranabdennour@gmail.com",
-                "عبد النور", "أمقران", BloodType.ANEGATIVE, Wilaya.BATNA, "تازولت", "0797417330"));
+                "عبد النور", "أمقران", BloodType.ANEGATIVE, Wilayas.BATNA, "تازولت", "0797417330"));
         post1.setContactElements(contact1);
+        post1.setImportance((float) 2.5);
         // ###############
 
         // Post 2 configuration
         post2.setPostText("السلام عليكم و رحمة الله تعالى و بركاته لقد تم تحديد موعد حملة تبرع بالدم في مدينة الشلف و ذلك لفائدة عدة مستشفيات و عيادات في المنطقة و على هذا الأساس نحن نرجوا منكم أن تكونوا في الموعد و أن تساعدونا على إنقاذ الكثير من الأرواح فقطرة من دمكم قد تساوي حياة إنسان.");
-        post2.setPostDate(new GregorianCalendar(2018, Calendar.FEBRUARY, 12).getTime());
+        post2.setPostDate(new Date());
         post2.addTag(new PostTag("مهم جدا"));
         post2.addTag(new PostTag("طلب تبرع بالدم"));
         post2.addTag(new PostTag("A"));
@@ -149,12 +151,17 @@ public class HomeController extends Fragment {
         post2.addTag(new PostTag("AB"));
         post2.addTag(new PostTag("O"));
         post2.addBloodType(BloodType.NONE);
+        //post2.setPostDate(date);
         /* Contact of post 2 */
         Contact contact2 =new Contact();
         contact2.setUser(new User(2, "password", "بين 18 و 25", "chohra@gmail.com",
-                "شهرة محمد ع.المالك", "أمقران", BloodType.APOSITIVE, Wilaya.CHLEF, "الآغا", "0661414530"));
+                "شهرة", "محمد ع.المالك", BloodType.APOSITIVE, Wilayas.CHLEF, "الآغا", "0661414530"));
         post2.setContactElements(contact2);
+        post2.setImportance((float) 3.5);
         // ###############
+
+        postList.add(post1);
+        postList.add(post2);
 
         adapter.notifyDataSetChanged();
     }
@@ -172,7 +179,7 @@ public class HomeController extends Fragment {
         public GridSpacingItemDecoration(int spanCount, int spacing, boolean includeEdge) {
             this.spanCount = spanCount;
             this.spacing = spacing;
-            this.includeEdge = includeEdge;
+            this.includeEdge = true;
         }
 
         @Override

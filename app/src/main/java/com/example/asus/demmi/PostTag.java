@@ -24,4 +24,12 @@ class PostTag {
     public PostTag(String Tag) {
         this.Tag = Tag;
     }
+
+    public String getTag() {
+        return Tag;
+    }
+
+    public void setTag(String tag) {
+        Tag = tag;
+    }
 }

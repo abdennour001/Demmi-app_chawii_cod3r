@@ -15,7 +15,7 @@ class User {
     private String familyName;
     private String age;
     private BloodType bloodType;
-    private Wilaya wilaya;
+    private Wilayas wilaya;
     private String region;
     private List<String> phoneNumbers = new ArrayList<>();
     private Sex sex;
@@ -28,7 +28,7 @@ class User {
     }
 
     /* Full stack constructor */
-    public User(int id, String password, String age,String email, String firstName, String familyName, BloodType bloodType, Wilaya wilaya, String region, String phoneNumber) {
+    public User(int id, String password, String age, String email, String firstName, String familyName, BloodType bloodType, Wilayas wilaya, String region, String phoneNumber) {
         this.email = email;
         this.password = password;
         this.id = id;
@@ -89,11 +89,11 @@ class User {
         this.bloodType = bloodType;
     }
 
-    public Wilaya getWilaya() {
+    public Wilayas getWilaya() {
         return wilaya;
     }
 
-    public void setWilaya(Wilaya wilaya) {
+    public void setWilaya(Wilayas wilaya) {
         this.wilaya = wilaya;
     }
 

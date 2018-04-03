@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     xmlns:fab="http://schemas.android.com/apk/res-auto">
 
 
@@ -28,9 +27,7 @@
         android:orientation="vertical"
         android:background="@color/colorBackground">
 
-        <!--<include layout="@layout/post_layout" />-->
         <include layout="@layout/home_content"/>
-
 
     </LinearLayout>
 
