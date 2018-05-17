@@ -1,96 +1,307 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+
+<ScrollView android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:layout_width="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_margin="50dp">
-
-            <TextView
-                android:id="@+id/image_name"
-                android:layout_width="65sp"
-                android:layout_height="65sp"
-                android:background="@drawable/badge_background"
-                android:gravity="center"
-                android:padding="3dp"
-                android:textColor="@color/colorWhiteBackGround"
-                android:text="أ ع"
-                android:textSize="30dp"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
-
-            <TextView
-                android:id="@+id/user_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="أمقران عبد النور"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                android:textColor="@color/colorGrey"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/post1"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:backgroundTint="@color/colorPrimary"
-                android:foreground="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:elevation="5dp"
-                app:cardCornerRadius="5dp">
+                android:layout_height="200dp"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/demmi_background3"
+                android:backgroundTint="@color/colorBackground"
+                android:backgroundTintMode="src_over">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:gravity="center">
+                    <!-- Image and name. -->
+                    <LinearLayout
+                        android:id="@+id/name_image_layout"
+                        android:layout_width="342dp"
+                        android:layout_height="188dp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:background="@drawable/test">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="amokranabdennour@gmail.com"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        android:layout_gravity="top"
-                        android:textColor="@color/colorGrey"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+                    <LinearLayout
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:background="@color/colorWhiteBackGroundTransparentCard">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="البريد الإلكتروني : "
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorAccent"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                        android:drawableRight="@drawable/ic_email_black_24dp"/>
+                        <TextView
+                            android:id="@+id/image_name"
+                            android:layout_width="40sp"
+                            android:layout_height="40sp"
+                            android:background="@drawable/badge_background"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:textColor="@color/colorWhiteBackGround"
+                            android:text="أ ع"
+                            android:textSize="16sp"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+                        <TextView
+                                android:id="@+id/user_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="أمقران عبد النور"
+                                android:textSize="20dp"
+                                android:textColor="@color/colorGreyText"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+                            <TextView
+                                android:id="@+id/user_place"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ولاية باتنة • بلدية تازولت"
+                                android:textSize="15dp"
+                                android:textColor="@color/colorGreyText"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"
+                                android:textSize="15dp"
+                                android:text="طلبات التبرع"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+                            <TextView
+                                android:id="@+id/number_of_post"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold"
+                                android:text="50"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
 
 
-                </LinearLayout>
+                    </LinearLayout>
 
+                    </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-</RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="معلومات الإتصال"
+                android:textSize="15dp"
+                android:textStyle="normal"
+                android:layout_gravity="right"
+                android:textColor="@color/colorGrey"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+
+            <!-- Separator. -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:backgroundTint="@color/colorGrey"
+                android:background="@color/colorGrey"
+                android:layout_marginTop="5dp"/>
+
+            <!-- Email. -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="البريد الإلكتروني"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorAccent"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:drawableTop="@drawable/ic_email_green_24dp"/>
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="amokranabdennour@gmail.com"
+                    android:textSize="15dp"
+                    android:textStyle="normal"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorGrey"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+            <!-- Phone number. -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="رقم الهاتف"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorAccent"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:drawableTop="@drawable/ic_local_phone_green_24dp"/>
+
+            <TextView
+                android:id="@+id/phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+213 97417330"
+                android:textSize="15dp"
+                android:textStyle="normal"
+                android:layout_gravity="center"
+                android:textColor="@color/colorGrey"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+
+            <!-- Place. -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="مكان الإقامة"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorAccent"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:drawableTop="@drawable/ic_place_green_24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ولاية باتنة • بلدية تازولت"
+                android:textSize="15dp"
+                android:textStyle="normal"
+                android:layout_gravity="center"
+                android:textColor="@color/colorGrey"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="معلومات شخصية"
+                android:textSize="15dp"
+                android:textStyle="normal"
+                android:layout_gravity="right"
+                android:textColor="@color/colorGrey"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+
+            <!-- Separator. -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:backgroundTint="@color/colorGrey"
+                android:background="@color/colorGrey"
+                android:layout_marginTop="5dp"/>
+
+            <!-- Place. -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الزمرة الدموية"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorAccent"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:drawableTop="@drawable/ic_healing_green_24dp"/>
+
+            <TextView
+                android:id="@+id/blood_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A -"
+                android:textSize="15dp"
+                android:textStyle="normal"
+                android:layout_gravity="center"
+                android:textColor="@color/colorGrey"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+            <!-- Place. -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الفئة العمرية"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorAccent"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:drawableTop="@drawable/ic_timelapse_geen_24dp"/>
+
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="من 18 إلى 25 سنة"
+                android:textSize="15dp"
+                android:textStyle="normal"
+                android:layout_gravity="center"
+                android:textColor="@color/colorGrey"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="طلبات التبرع"
+                android:textSize="15dp"
+                android:textStyle="normal"
+                android:layout_gravity="right"
+                android:textColor="@color/colorGrey"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+
+            <!-- Separator. -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:backgroundTint="@color/colorGrey"
+                android:background="@color/colorGrey"
+                android:layout_marginTop="5dp"/>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

@@ -11,10 +11,13 @@
     <color name="colorAccentPressed">#9d4cd670</color>
     <color name="colorAccentOverRedPressed">#c386fda6</color>
     <color name="colorGrey">#78000000</color>
+    <color name="colorGreyText">#db2b2b2b</color>
     <color name="colorGreyTabIcon">#59000000</color>
     <color name="colorBackground">#12000000</color>
     <color name="colorTransparent">#00ffffff</color>
     <color name="colorOver">#a6ffffff</color>
+    <color name="colorWhiteBackGroundTransparent">#1bffffff</color>
+    <color name="colorWhiteBackGroundTransparentCard">#dfffffff</color>
 
     <!--#68e489-->
 
