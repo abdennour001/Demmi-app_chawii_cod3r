@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Demmi.iml" filepath="$PROJECT_DIR$/Demmi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Demmi-app_chawii_cod3r.iml" filepath="$PROJECT_DIR$/Demmi-app_chawii_cod3r.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
