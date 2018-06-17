@@ -30,6 +30,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
@@ -42,6 +44,10 @@ public class SignUpActivity extends AppCompatActivity {
     // The Authentication reference.
 
     private FirebaseAuth mAuth;
+
+    // The database reference.
+
+    DatabaseReference database;
 
     // UI References.
 
@@ -95,6 +101,10 @@ public class SignUpActivity extends AppCompatActivity {
         // Initializing the Authentication reference
 
         mAuth = FirebaseAuth.getInstance();
+
+        // Initializing the database reference.
+
+        database = FirebaseDatabase.getInstance().getReference();
 
         /**
          * Add all (findViews) here. **/
@@ -237,17 +247,17 @@ public class SignUpActivity extends AppCompatActivity {
     private void attemptSignUp() {
 
         // Store values at the time of the sign up
-        String userName = mUserName.getText().toString();
-        String phoneNumber = mPhoneNumber.getText().toString();
-        String email = mEmail.getText().toString();
+        final String userName = mUserName.getText().toString();
+        final String phoneNumber = mPhoneNumber.getText().toString();
+        final String email = mEmail.getText().toString();
         String passWord = mPassword1.getText().toString();
         String passWordConfirmation = mPassword2.getText().toString();
-        String wilaya = mWilayaSpinner.getSelectedItem().toString();
-        String region = mRegion.getText().toString();
-        String sex = mSexSpinner.getSelectedItem().toString();
-        String age = mAge.getSelectedItem().toString();
-        String bloodCategory = mBloodCategory.getSelectedItem().toString();
-        String bloodRH = mBloodRisus.getSelectedItem().toString();
+        final String wilaya = mWilayaSpinner.getSelectedItem().toString();
+        final String region = mRegion.getText().toString();
+        final String sex = mSexSpinner.getSelectedItem().toString();
+        final String age = mAge.getSelectedItem().toString();
+        final String bloodCategory = mBloodCategory.getSelectedItem().toString();
+        final String bloodRH = mBloodRisus.getSelectedItem().toString();
 
         // Create a new firebase user
         mAuth.createUserWithEmailAndPassword(email, passWord)
@@ -257,7 +267,9 @@ public class SignUpActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("TAG", "createUserWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
+                            FirebaseUser firebaseUser = mAuth.getCurrentUser();
+                            User user = new User(userName,phoneNumber,email,wilaya,region,sex,age,bloodCategory,bloodRH);
+                            database.child("Users").child(firebaseUser.getUid()).setValue(user);
                             //updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
