@@ -270,16 +270,12 @@ public class SignUpActivity extends AppCompatActivity {
                             FirebaseUser firebaseUser = mAuth.getCurrentUser();
                             User user = new User(userName,phoneNumber,email,wilaya,region,sex,age,bloodCategory,bloodRH);
                             database.child("Users").child(firebaseUser.getUid()).setValue(user);
-                            //updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("TAG", "createUserWithEmail:failure", task.getException());
                             Toast.makeText(SignUpActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
-                            //updateUI(null);
                         }
-
-                        // ...
                     }
                 });
 

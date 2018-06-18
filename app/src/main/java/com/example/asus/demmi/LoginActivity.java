@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Build;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -20,6 +21,14 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.w3c.dom.Text;
 
@@ -37,6 +46,14 @@ public class LoginActivity extends AppCompatActivity {
             "0797417330:hello", "abdou@example.com:world"
     };
 
+    // The Authentication reference.
+
+    private FirebaseAuth mAuth;
+
+    // The database reference.
+
+    DatabaseReference database;
+
 
     // UI references.
     private EditText mEmailView;
@@ -50,6 +67,14 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        // Initializing the Authentication reference
+
+        mAuth = FirebaseAuth.getInstance();
+
+        // Initializing the database reference.
+
+        database = FirebaseDatabase.getInstance().getReference();
 
         // Set up the login form.
         mEmailView = (EditText)findViewById(R.id.emailtext_login);
@@ -186,36 +211,29 @@ public class LoginActivity extends AppCompatActivity {
             cancel = true;
         }
 
-        // All clear.
-        Intent mainIntent = new Intent(LoginActivity.this,MainActivity.class);
-        startActivity(mainIntent);
-        finish();
-        /*for (String credential : DUMMY_CREDENTIALS) {
-            String[] pieces = credential.split(":");
-            if (pieces[0].equals(email)) {
-                // Account exists, return true if the password matches.
-                if(pieces[1].equals(password)) {
-                    mInputControl.setVisibility(View.GONE);
-                    try {
-                        // Simulate network access.
-                        Thread.sleep(2000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    Intent mainIntent = new Intent(LoginActivity.this,MainActivity.class);
-                    startActivity(mainIntent);
-                    finish();
-                } else {
-                    mInputControl.setVisibility(TextView.VISIBLE);
-                    mInputControl.setText(getString(R.string.error_incorrect_password));
-                    Toast.makeText(getApplicationContext(), getString(R.string.error_incorrect_password), Toast.LENGTH_SHORT).show();
+        if(!cancel) {
 
-                    mPasswordView.setText(null);
-                    mProgressView.setVisibility(View.INVISIBLE);
-                }
-            }
-        }*/
-
+            mAuth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                // Sign in success, update UI with the signed-in user's information
+                                Log.d("TAG", "signInWithEmail:success");
+                                FirebaseUser user = mAuth.getCurrentUser();
+                                Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
+                                startActivity(mainIntent);
+                                finish();
+                            } else {
+                                // If sign in fails, display a message to the user.
+                                Log.w("TAG", "signInWithEmail:failure", task.getException());
+                                Toast.makeText(LoginActivity.this, "Authentication failed.",
+                                        Toast.LENGTH_SHORT).show();
+                                mProgressView.setVisibility(View.INVISIBLE);
+                            }
+                        }
+                    });
+        }
     }
 
     private boolean isEmailValid(String email) {
