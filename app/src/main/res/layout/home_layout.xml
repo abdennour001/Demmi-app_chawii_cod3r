@@ -21,7 +21,10 @@
         android:indeterminateTint="@color/colorPrimary"
         />
 
-    <include layout="@layout/post_layout" />
+    <ListView
+        android:id="@+id/postsList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 
     <LinearLayout

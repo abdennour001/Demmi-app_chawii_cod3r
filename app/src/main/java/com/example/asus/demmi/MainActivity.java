@@ -10,11 +10,26 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+    //The firebase authenticated user
+    FirebaseUser currentUser;
+    FirebaseAuth mAuth;
+    DatabaseReference database;
+    Bundle bundle = new Bundle();
 
     private Toolbar toolbar;
     private TabLayout tabLayout;
@@ -43,41 +58,63 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Check if user is signed in (non-null)
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        database = FirebaseDatabase.getInstance().getReference();
+        if(currentUser!=null){
+            database.child("Users").child(currentUser.getUid()).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    Toast.makeText(MainActivity.this, dataSnapshot.toString(),Toast.LENGTH_LONG).show();
+                    User user = dataSnapshot.getValue(User.class);
+                    bundle.putSerializable("user",user);
+
+                    tabHomeIconLayout = getLayoutInflater().inflate(R.layout.custom_icon_home, null);
+                    tabNotificationIconLayout = getLayoutInflater().inflate(R.layout.custom_icon_notification, null);
+                    tabPersonIconLayout = getLayoutInflater().inflate(R.layout.custom_icon_person, null);
+
+                    notificationNumberControl = tabNotificationIconLayout.findViewById(R.id.notification_badge);
+
+                    mTabBarTitle = (TextView) findViewById(R.id.page_indicator);
+                    viewPager = (ViewPager) findViewById(R.id.viewpager);
+                    setupViewPager(viewPager);
+                    tabLayout = (TabLayout) findViewById(R.id.tabs);
+                    tabLayout.setupWithViewPager(viewPager);
+                    tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.colorPrimary));
+                    tabLayout.setBackgroundColor(getResources().getColor(R.color.colorWhiteBackGround));
+                    tabSelectorController();
+
+                    // Set up the first focus tab icon
+                    setupTabIcons();
+                    switch(tabLayout.getSelectedTabPosition()) {
+                        case 0:
+                            tabHomeIconLayout.findViewById(R.id.icon).setBackgroundResource(tabIconsFocus[0]);
+                            break;
+                        case 1:
+                            tabNotificationIconLayout.findViewById(R.id.icon).setBackgroundResource(tabIconsFocus[1]);
+                            break;
+                        case 2:
+                            tabPersonIconLayout.findViewById(R.id.icon).setBackgroundResource(tabIconsFocus[2]);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+        }
+
         //toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // Get the bar title.
 
-        tabHomeIconLayout = getLayoutInflater().inflate(R.layout.custom_icon_home, null);
-        tabNotificationIconLayout = getLayoutInflater().inflate(R.layout.custom_icon_notification, null);
-        tabPersonIconLayout = getLayoutInflater().inflate(R.layout.custom_icon_person, null);
 
-        notificationNumberControl = tabNotificationIconLayout.findViewById(R.id.notification_badge);
-
-        mTabBarTitle = (TextView) findViewById(R.id.page_indicator);
-        viewPager = (ViewPager) findViewById(R.id.viewpager);
-        setupViewPager(viewPager);
-        tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(viewPager);
-        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.colorPrimary));
-        tabLayout.setBackgroundColor(getResources().getColor(R.color.colorWhiteBackGround));
-        tabSelectorController();
-
-        // Set up the first focus tab icon
-        setupTabIcons();
-        switch(tabLayout.getSelectedTabPosition()) {
-            case 0:
-                tabHomeIconLayout.findViewById(R.id.icon).setBackgroundResource(tabIconsFocus[0]);
-                break;
-            case 1:
-                tabNotificationIconLayout.findViewById(R.id.icon).setBackgroundResource(tabIconsFocus[1]);
-                break;
-            case 2:
-                tabPersonIconLayout.findViewById(R.id.icon).setBackgroundResource(tabIconsFocus[2]);
-                break;
-            default:
-                break;
-        }
     }
 
     /**
@@ -148,9 +185,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new HomeController(), "");
+        HomeController home = new HomeController();
+        home.setArguments(bundle);
+        adapter.addFragment(home, "");
+
         adapter.addFragment(new NotificationController(), "");
+
         adapter.addFragment(new ProfilController(), "");
+
         viewPager.setAdapter(adapter);
     }
     class ViewPagerAdapter extends FragmentPagerAdapter {

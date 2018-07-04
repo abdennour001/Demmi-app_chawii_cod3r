@@ -1,5 +1,6 @@
 package com.example.asus.demmi;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
@@ -93,10 +94,18 @@ public class SignUpActivity extends AppCompatActivity {
     private boolean regionCheck=false;
     private boolean ageCheck=false;
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
+        /**
+         * Add all (findViews) here. **/
+        defineViews();
+        /**
+         *
+         * **/
 
         // Initializing the Authentication reference
 
@@ -106,12 +115,6 @@ public class SignUpActivity extends AppCompatActivity {
 
         database = FirebaseDatabase.getInstance().getReference();
 
-        /**
-         * Add all (findViews) here. **/
-        defineViews();
-        /**
-         *
-         * **/
         // Back event handler
         mBackButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -183,7 +186,7 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
 
-        /**
+        /**1
          * Let's check some inputs.
          * **/
         // Add check control handlers (listeners)

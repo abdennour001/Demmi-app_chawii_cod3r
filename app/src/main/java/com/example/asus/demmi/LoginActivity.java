@@ -38,14 +38,6 @@ import org.w3c.dom.Text;
 
 public class LoginActivity extends AppCompatActivity {
 
-    /**
-     * A dummy authentication store containing known user names and passwords.
-     * TODO: remove after connecting to a real authentication system.
-     */
-    private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "0797417330:hello", "abdou@example.com:world"
-    };
-
     // The Authentication reference.
 
     private FirebaseAuth mAuth;

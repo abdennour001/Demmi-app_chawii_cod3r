@@ -1,6 +1,8 @@
 package com.example.asus.demmi;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable{
 
     String userName;
     String phoneNumber;
