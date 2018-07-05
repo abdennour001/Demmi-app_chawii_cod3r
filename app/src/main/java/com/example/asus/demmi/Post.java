@@ -85,4 +85,27 @@ public class Post {
         this.body = body;
     }
 
+    public String getBlood() {
+        return blood;
+    }
+
+    public void setBlood(String blood) {
+        this.blood = blood;
+    }
+
+    public String getRhesus() {
+        return rhesus;
+    }
+
+    public void setRhesus(String rhesus) {
+        this.rhesus = rhesus;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 }
