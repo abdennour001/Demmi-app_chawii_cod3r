@@ -6,7 +6,7 @@ public class Post {
     private String userPhoneNumber;
     private String userWilaya;
     private String userRegion;
-    private String Body;
+    private String body;
     private String blood;
     private String rhesus;
     private String type;
@@ -19,10 +19,31 @@ public class Post {
         this.userPhoneNumber = userPhoneNumber;
         this.userWilaya = userWilaya;
         this.userRegion = userRegion;
-        Body = body;
+        this.body = body;
     }
 
+    public Post(String userName, String userPhoneNumber, String userWilaya, String userRegion, String body,
+    String blood, String rhesus) {
+        this.userName = userName;
+        this.userPhoneNumber = userPhoneNumber;
+        this.userWilaya = userWilaya;
+        this.userRegion = userRegion;
+        this.body = body;
+        this.blood = blood;
+        this.rhesus = rhesus;
+    }
 
+    public Post(String userName, String userPhoneNumber, String userWilaya, String userRegion, String body,
+    String blood, String rhesus, String type) {
+        this.userName = userName;
+        this.userPhoneNumber = userPhoneNumber;
+        this.userWilaya = userWilaya;
+        this.userRegion = userRegion;
+        this.body = body;
+        this.blood = blood;
+        this.rhesus = rhesus;
+        this.type = type;
+    }
 
     public String getUserName() {
         return userName;
@@ -57,10 +78,11 @@ public class Post {
     }
 
     public String getBody() {
-        return Body;
+        return body;
     }
 
     public void setBody(String body) {
-        Body = body;
+        this.body = body;
     }
+
 }
