@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Check if user is signed in (non-null)
         mAuth = FirebaseAuth.getInstance();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
+        currentUser = mAuth.getCurrentUser();
         database = FirebaseDatabase.getInstance().getReference();
         if(currentUser!=null){
             database.child("Users").child(currentUser.getUid()).addValueEventListener(new ValueEventListener() {

@@ -38,10 +38,10 @@
                     android:layout_gravity="top|left">
 
                     <ImageView
+                        android:id="@+id/options"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
-                        android:background="?attr/selectableItemBackground"
                         android:src="@drawable/ic_more_horiz_grey_24dp"/>
 
                 </LinearLayout>
@@ -195,6 +195,7 @@
                 android:gravity="top">
 
                 <TextView
+                    android:id="@+id/blood"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/buttonstylepost"
@@ -205,20 +206,8 @@
                     android:textStyle="normal"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
 
-
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/buttonstylepost"
-                    android:layout_marginLeft="5dp"
-                    android:text="A -"
-                    android:textColor="@color/colorWhiteBackGround"
-                    android:textSize="14dp"
-                    android:textStyle="normal"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
-
-
-                <TextView
+                    android:id="@+id/type"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/buttonstylepost"
@@ -240,6 +229,7 @@
                 android:gravity="top">
 
                 <TextView
+                    android:id="@+id/sharepost"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/ic_reply_green_24dp"
@@ -249,7 +239,6 @@
                     android:textSize="18dp"
                     android:textStyle="bold"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
-
 
                 <TextView
                     android:id="@+id/userphonenumber"

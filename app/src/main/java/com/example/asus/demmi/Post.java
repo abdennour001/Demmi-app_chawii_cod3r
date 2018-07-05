@@ -2,11 +2,14 @@ package com.example.asus.demmi;
 
 public class Post {
 
-    String userName;
-    String userPhoneNumber;
-    String userWilaya;
-    String userRegion;
-    String Body;
+    private String userName;
+    private String userPhoneNumber;
+    private String userWilaya;
+    private String userRegion;
+    private String Body;
+    private String blood;
+    private String rhesus;
+    private String type;
 
     public Post() {
     }
@@ -18,6 +21,8 @@ public class Post {
         this.userRegion = userRegion;
         Body = body;
     }
+
+
 
     public String getUserName() {
         return userName;
