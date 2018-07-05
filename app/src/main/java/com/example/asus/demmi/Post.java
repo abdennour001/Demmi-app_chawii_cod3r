@@ -2,6 +2,7 @@ package com.example.asus.demmi;
 
 public class Post {
 
+    private String id;
     private String userName;
     private String userPhoneNumber;
     private String userWilaya;
@@ -14,16 +15,9 @@ public class Post {
     public Post() {
     }
 
-    public Post(String userName, String userPhoneNumber, String userWilaya, String userRegion, String body) {
-        this.userName = userName;
-        this.userPhoneNumber = userPhoneNumber;
-        this.userWilaya = userWilaya;
-        this.userRegion = userRegion;
-        this.body = body;
-    }
-
-    public Post(String userName, String userPhoneNumber, String userWilaya, String userRegion, String body,
-    String blood, String rhesus) {
+    public Post(String id, String userName, String userPhoneNumber, String userWilaya, String userRegion, String body,
+                String blood, String rhesus) {
+        this.id = id;
         this.userName = userName;
         this.userPhoneNumber = userPhoneNumber;
         this.userWilaya = userWilaya;
@@ -33,16 +27,12 @@ public class Post {
         this.rhesus = rhesus;
     }
 
-    public Post(String userName, String userPhoneNumber, String userWilaya, String userRegion, String body,
-    String blood, String rhesus, String type) {
-        this.userName = userName;
-        this.userPhoneNumber = userPhoneNumber;
-        this.userWilaya = userWilaya;
-        this.userRegion = userRegion;
-        this.body = body;
-        this.blood = blood;
-        this.rhesus = rhesus;
-        this.type = type;
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getUserName() {

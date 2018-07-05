@@ -39,11 +39,9 @@ import org.w3c.dom.Text;
 public class LoginActivity extends AppCompatActivity {
 
     // The Authentication reference.
-
     private FirebaseAuth mAuth;
 
     // The database reference.
-
     DatabaseReference database;
 
 
@@ -61,11 +59,9 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         // Initializing the Authentication reference
-
         mAuth = FirebaseAuth.getInstance();
 
         // Initializing the database reference.
-
         database = FirebaseDatabase.getInstance().getReference();
 
         // Set up the login form.

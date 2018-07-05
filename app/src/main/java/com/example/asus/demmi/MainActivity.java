@@ -66,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
             database.child("Users").child(currentUser.getUid()).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
-                    Toast.makeText(MainActivity.this, dataSnapshot.toString(),Toast.LENGTH_LONG).show();
                     User user = dataSnapshot.getValue(User.class);
                     bundle.putSerializable("user",user);
 

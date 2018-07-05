@@ -20,8 +20,16 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.github.clans.fab.FloatingActionMenu;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
@@ -30,6 +38,11 @@ import java.util.Random;
  */
 
 public class HomeController extends Fragment {
+
+    //The firebase authenticated user
+    FirebaseUser currentUser;
+    FirebaseAuth mAuth;
+    DatabaseReference database;
 
     ListView postsList;
     ArrayList<Post> postArrayList = new ArrayList<>();
@@ -57,6 +70,13 @@ public class HomeController extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.home_layout, container, false);
 
+        // Initializing the database reference.
+        database = FirebaseDatabase.getInstance().getReference();
+
+        // Check if user is signed in (non-null)
+        mAuth = FirebaseAuth.getInstance();
+        currentUser = mAuth.getCurrentUser();
+
         if(getArguments() != null){
             user = (User) getArguments().getSerializable("user");
         }
@@ -65,6 +85,27 @@ public class HomeController extends Fragment {
 
         postsAdapter = new PostsAdapter(getContext(), postArrayList);
         postsList.setAdapter(postsAdapter);
+
+        database.child("Posts").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                postArrayList.clear();
+                Iterator<DataSnapshot> i = dataSnapshot.getChildren().iterator();
+                while(i.hasNext()){
+                    Iterator<DataSnapshot> i2 = i.next().getChildren().iterator();
+                    while(i2.hasNext()){
+                        Post p = i2.next().getValue(Post.class);
+                        postArrayList.add(p);
+                    }
+                }
+                postsAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
 
         return rootView;
     }
@@ -95,11 +136,15 @@ public class HomeController extends Fragment {
                     @Override
                     public void onClick(DialogInterface dialog, int whichButton) {
 
-                        Post post = new Post(user.getUserName(),user.getPhoneNumber(), user.getWilaya(), user.getRegion(),
+                        Random r = new Random();
+                        int i1 = r.nextInt(1000000000);
+
+                        Post post = new Post(String.valueOf(i1), user.getUserName(),user.getPhoneNumber(), user.getWilaya(), user.getRegion(),
                                 input.getText().toString(), String.valueOf(blood.getSelectedItem()),
                                 String.valueOf(rhesus.getSelectedItem()));
                         postArrayList.add(post);
                         postsAdapter.notifyDataSetChanged();
+                        database.child("Posts").child(currentUser.getUid()).child(post.getId()).setValue(post);
 
                     }
                 });
@@ -160,6 +205,7 @@ public class HomeController extends Fragment {
             TextView body = (TextView) view.findViewById(R.id.body);
             TextView userphonenumber = (TextView) view.findViewById(R.id.userphonenumber);
             TextView blood = (TextView) view.findViewById(R.id.blood);
+            TextView letters = (TextView) view.findViewById(R.id.user_letters);
 
             username.setText(post.getUserName());
             userwilaya.setText(post.getUserWilaya());
@@ -167,6 +213,7 @@ public class HomeController extends Fragment {
             userphonenumber.setText(post.getUserPhoneNumber());
             body.setText(post.getBody());
             blood.setText(post.getBlood()+" "+post.getRhesus());
+            letters.setText(post.getUserName().split(" ")[0].substring(0,1)+post.getUserName().split(" ")[1].substring(0,1));
 
             return view;
         }

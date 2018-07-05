@@ -157,7 +157,7 @@
 
 
                     <TextView
-                        android:id="@+id/notification_badge"
+                        android:id="@+id/user_letters"
                         android:layout_width="40sp"
                         android:layout_height="40sp"
                         android:layout_margin="3dp"
