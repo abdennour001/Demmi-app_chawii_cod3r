@@ -16,7 +16,6 @@
         android:orientation="vertical"
         android:paddingLeft="25sp"
         android:paddingRight="25sp"
-        android:paddingTop="10sp"
         android:paddingBottom="7sp"
         android:background="@drawable/backgound_primaty_color_gradiant">
 
@@ -55,8 +54,7 @@
             android:textSize="14sp"
             android:textColor="#fff"
             style="?android:textAppearanceSmall"
-            android:text="@string/desc_text"
-            android:layout_marginTop="15sp">
+            android:text="@string/desc_text">
         </TextView>
 
         <TextView
@@ -68,15 +66,13 @@
             android:layout_gravity="center"
             android:layout_marginTop="5sp"
             android:textStyle="bold"
-            style="?android:textAppearanceSmallInverse"
-            android:layout_marginBottom="5sp">
+            style="?android:textAppearanceSmallInverse">
         </TextView>
 
         <LinearLayout
             android:id="@+id/linearlayout3"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_gravity="center"
             android:orientation="horizontal">
 
@@ -127,7 +123,7 @@
             style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:layout_gravity="center"
             android:visibility="invisible"
             android:background="@drawable/drop_blood"
@@ -192,13 +188,21 @@
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
             android:textSize="14sp"
             android:textColor="@color/colorPrimary"
             android:visibility="invisible"
             android:text="الرجاء التأكد من معلومات الإدخال و إعادة المحاولة مرة أخرى"
             android:layout_gravity="center_horizontal">
         </TextView>
+
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/fb_login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp" />
 
     </LinearLayout>
 

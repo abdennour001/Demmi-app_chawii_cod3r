@@ -22,6 +22,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -52,6 +57,9 @@ public class LoginActivity extends AppCompatActivity {
     private View mLoginFormView;
     private TextView mInputControl;
 
+    CallbackManager callbackManager;
+    LoginButton loginButton;
+
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +71,8 @@ public class LoginActivity extends AppCompatActivity {
 
         // Initializing the database reference.
         database = FirebaseDatabase.getInstance().getReference();
+
+        callbackManager = CallbackManager.Factory.create();
 
         // Set up the login form.
         mEmailView = (EditText)findViewById(R.id.emailtext_login);
@@ -133,6 +143,29 @@ public class LoginActivity extends AppCompatActivity {
         mInputControl = (TextView)findViewById(R.id.pleasecheckout);
         mProgressView = findViewById(R.id.login_progress);
         mLoginFormView = findViewById(R.id.email_login_form);
+
+
+
+        loginButton = (LoginButton) findViewById(R.id.fb_login_button);
+        loginButton.setReadPermissions("public_profile");
+
+        // Callback registration
+        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+
+            }
+
+            @Override
+            public void onCancel() {
+
+            }
+
+            @Override
+            public void onError(FacebookException exception) {
+
+            }
+        });
     }
 
     private void attemptLearnMore() {
